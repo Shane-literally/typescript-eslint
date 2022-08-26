@@ -80,6 +80,7 @@ import noUnsafeAssignment from './no-unsafe-assignment';
 import noUnsafeCall from './no-unsafe-call';
 import noUnsafeMemberAccess from './no-unsafe-member-access';
 import noUnsafeReturn from './no-unsafe-return';
+import noUnusedExports from './no-unused-exports';
 import noUnusedExpressions from './no-unused-expressions';
 import noUnusedVars from './no-unused-vars';
 import noUseBeforeDefine from './no-use-before-define';
@@ -209,6 +210,7 @@ export default {
   'no-unsafe-call': noUnsafeCall,
   'no-unsafe-member-access': noUnsafeMemberAccess,
   'no-unsafe-return': noUnsafeReturn,
+  'no-unused-exports': noUnusedExports,
   'no-unused-expressions': noUnusedExpressions,
   'no-unused-vars': noUnusedVars,
   'no-use-before-define': noUseBeforeDefine,

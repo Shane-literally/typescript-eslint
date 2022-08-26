@@ -2,6 +2,8 @@
   // This matches the value configured on the autoformatter
   "editor.rulers": [80],
 
+	"eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+
   // An array of language ids which should be validated by ESLint
   "eslint.validate": [
       "javascript",
