@@ -39,13 +39,22 @@ export function FinancialContributors(): JSX.Element {
         >
           Become a financial contributor
         </Link>
-        <Link
-          className="button button--info button--outline"
-          to="https://opencollective.com/typescript-eslint"
-          target="_blank"
-        >
-          See all financial contributors
-        </Link>
+        <div className={styles.linksSmaller}>
+          <Link
+            className="button button--info button--outline"
+            to="https://opencollective.com/typescript-eslint"
+            target="_blank"
+          >
+            See all financial contributors
+          </Link>
+          <Link
+            className="button button--info button--outline"
+            to="https://github.com/typescript-eslint/typescript-eslint/blob/main/SPONSORSHIP.md"
+            target="_blank"
+          >
+            Learn more
+          </Link>
+        </div>
       </div>
     </>
   );

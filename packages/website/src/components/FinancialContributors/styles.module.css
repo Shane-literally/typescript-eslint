@@ -12,6 +12,11 @@
   margin: 48px 24px 24px;
 }
 
+.linksSmaller {
+  display: flex;
+  gap: 8px;
+}
+
 .become {
   font-size: 1.25rem;
 }
