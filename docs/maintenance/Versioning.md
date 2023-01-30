@@ -38,7 +38,8 @@ We generally support at least the latest two major versions of ESLint.
 ### Node
 
 This project makes an effort to support Active LTS and Maintenance LTS release statuses of Node according to [Node's release document](https://nodejs.org/en/about/releases).
-Support for specific Current status releases are considered periodically.
+Support for specific Node Current status releases are considered periodically.
+We also support at least ESLint's minimum version range.
 
 ### TypeScript
 
