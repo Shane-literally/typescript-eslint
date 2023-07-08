@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
+    "typeRoots": ["./typings"],
     "target": "es5",
     "module": "commonjs",
     "strict": true,

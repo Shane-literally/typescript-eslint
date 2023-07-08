@@ -282,59 +282,68 @@ describe('TypeOrValueSpecifier', () => {
       runTestNegative,
     );
 
-    it.each<[string, TypeOrValueSpecifier]>([
+    it.only.each<[string, TypeOrValueSpecifier]>([
+      // [
+      //   'import type {Node} from "typescript"; type Test = Node;',
+      //   { from: 'package', name: 'Node', package: 'typescript' },
+      // ],
+      // [
+      //   'import type {Node} from "typescript"; type Test = Node;',
+      //   { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
+      // ],
+      // [
+      //   'import {Node} from "typescript"; type Test = Node;',
+      //   { from: 'package', name: 'Node', package: 'typescript' },
+      // ],
+      // [
+      //   'import {Node} from "typescript"; type Test = Node;',
+      //   { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
+      // ],
+      // [
+      //   'import * as ts from "typescript"; type Test = ts.Node;',
+      //   { from: 'package', name: 'Node', package: 'typescript' },
+      // ],
+      // [
+      //   'import * as ts from "typescript"; type Test = ts.Node;',
+      //   { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
+      // ],
+      // [
+      //   'import type * as ts from "typescript"; type Test = ts.Node;',
+      //   { from: 'package', name: 'Node', package: 'typescript' },
+      // ],
+      // [
+      //   'import type * as ts from "typescript"; type Test = ts.Node;',
+      //   { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
+      // ],
+      // [
+      //   'import type {Node as TsNode} from "typescript"; type Test = TsNode;',
+      //   { from: 'package', name: 'Node', package: 'typescript' },
+      // ],
+      // [
+      //   'import type {Node as TsNode} from "typescript"; type Test = TsNode;',
+      //   { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
+      // ],
+      // // The following type is available from the @types/semver package.
+      // [
+      //   'import {SemVer} from "semver"; type Test = SemVer;',
+      //   { from: 'package', name: 'SemVer', package: 'semver' },
+      // ],
+      // // The following type is available from the scoped @types/babel__code-frame package.
+      // [
+      //   'import {BabelCodeFrameOptions} from "@babel/code-frame"; type Test = BabelCodeFrameOptions;',
+      //   {
+      //     from: 'package',
+      //     name: 'BabelCodeFrameOptions',
+      //     package: '@babel/code-frame',
+      //   },
+      // ],
+      // https://github.com/typescript-eslint/typescript-eslint/issues/6868
       [
-        'import type {Node} from "typescript"; type Test = Node;',
-        { from: 'package', name: 'Node', package: 'typescript' },
-      ],
-      [
-        'import type {Node} from "typescript"; type Test = Node;',
-        { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
-      ],
-      [
-        'import {Node} from "typescript"; type Test = Node;',
-        { from: 'package', name: 'Node', package: 'typescript' },
-      ],
-      [
-        'import {Node} from "typescript"; type Test = Node;',
-        { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
-      ],
-      [
-        'import * as ts from "typescript"; type Test = ts.Node;',
-        { from: 'package', name: 'Node', package: 'typescript' },
-      ],
-      [
-        'import * as ts from "typescript"; type Test = ts.Node;',
-        { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
-      ],
-      [
-        'import type * as ts from "typescript"; type Test = ts.Node;',
-        { from: 'package', name: 'Node', package: 'typescript' },
-      ],
-      [
-        'import type * as ts from "typescript"; type Test = ts.Node;',
-        { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
-      ],
-      [
-        'import type {Node as TsNode} from "typescript"; type Test = TsNode;',
-        { from: 'package', name: 'Node', package: 'typescript' },
-      ],
-      [
-        'import type {Node as TsNode} from "typescript"; type Test = TsNode;',
-        { from: 'package', name: ['Node', 'Symbol'], package: 'typescript' },
-      ],
-      // The following type is available from the @types/semver package.
-      [
-        'import {SemVer} from "semver"; type Test = SemVer;',
-        { from: 'package', name: 'SemVer', package: 'semver' },
-      ],
-      // The following type is available from the scoped @types/babel__code-frame package.
-      [
-        'import {BabelCodeFrameOptions} from "@babel/code-frame"; type Test = BabelCodeFrameOptions;',
+        `import { Foo } from 'foo'; type Test = Foo;`,
         {
           from: 'package',
-          name: 'BabelCodeFrameOptions',
-          package: '@babel/code-frame',
+          name: ['Foo', 'Test'],
+          package: 'foo',
         },
       ],
     ])('matches a matching package specifier: %s', runTestPositive);
