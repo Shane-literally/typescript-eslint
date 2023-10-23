@@ -6087,7 +6087,7 @@ __metadata:
     ts-node: 10.7.0
     tslint: ^6.1.3
     tsx: ^3.12.7
-    typescript: ">=4.3.5 <5.3.0"
+    typescript: next
   languageName: unknown
   linkType: soft
 
@@ -20185,33 +20185,63 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
+"typescript@npm:*, typescript@npm:>=3 < 6, typescript@npm:next":
+  version: 5.3.0-dev.20231022
+  resolution: "typescript@npm:5.3.0-dev.20231022"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 7912821dac4d962d315c36800fe387cdc0a6298dba7ec171b350b4a6e988b51d7b8f051317786db1094bd7431d526b648aba7da8236607febb26cf5b871d2d3c
+  checksum: 3a178b14882238908502af73c681ab3f3df51bd311e0de3c3b348350702bc7f913a06444c1f50f2d98c0795dfa917d4a20db0aa603b18a7b2e43187b67d5b66a
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.2.2#./.yarn/patches/typescript-npm-5.2.2-01717e9f84.patch::locator=%40typescript-eslint%2Ftypescript-eslint%40workspace%3A.":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#./.yarn/patches/typescript-npm-5.2.2-01717e9f84.patch::version=5.2.2&hash=c1c928&locator=%40typescript-eslint%2Ftypescript-eslint%40workspace%3A."
+"typescript@npm:~5.0.4":
+  version: 5.0.4
+  resolution: "typescript@npm:5.0.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 68f0d660e40a032ed507e2dea44a2729f522a2d1a9b0597aa5459cf7401e244245856241189313087453f705b6bdc11639fcb9266425ddb0c4404233f4669b5c
+  checksum: 82b94da3f4604a8946da585f7d6c3025fff8410779e5bde2855ab130d05e4fd08938b9e593b6ebed165bda6ad9292b230984f10952cf82f0a0ca07bbeaa08172
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@patch%3Atypescript@npm%253A5.2.2%23./.yarn/patches/typescript-npm-5.2.2-01717e9f84.patch%3A%3Alocator=%2540typescript-eslint%252Ftypescript-eslint%2540workspace%253A.#~builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@patch%3Atypescript@npm%253A5.2.2%23./.yarn/patches/typescript-npm-5.2.2-01717e9f84.patch%3A%3Aversion=5.2.2&hash=c1c928&locator=%2540typescript-eslint%252Ftypescript-eslint%2540workspace%253A.#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+"typescript@npm:~5.1.3":
+  version: 5.1.6
+  resolution: "typescript@npm:5.1.6"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 44eead0a64bb01bc40b0a8ba44f56ae0caf7c7afe3d6ef723bcb2259a7b8aa98d24096e478ba0bcd4fe9295b686d9324e79d1636c16b08caedfec14e9dead065
+  checksum: b2f2c35096035fe1f5facd1e38922ccb8558996331405eb00a5111cc948b2e733163cc22fab5db46992aba7dd520fff637f2c1df4996ff0e134e77d3249a7350
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@>=3 < 6#~builtin<compat/typescript>, typescript@patch:typescript@next#~builtin<compat/typescript>":
+  version: 5.3.0-dev.20231022
+  resolution: "typescript@patch:typescript@npm%3A5.3.0-dev.20231022#~builtin<compat/typescript>::version=5.3.0-dev.20231022&hash=29ae49"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 33368bfe681c925bb66d89a19803b3e277fcda2acd2fedeec82a1cb2c21835a90d894c9e56a22027109a9eb60e69efaa1908f098656df91ead5879dfc959e8c3
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@~5.0.4#~builtin<compat/typescript>":
+  version: 5.0.4
+  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: d26b6ba97b6d163c55dbdffd9bbb4c211667ebebc743accfeb2c8c0154aace7afd097b51165a72a5bad2cf65a4612259344ff60f8e642362aa1695c760d303ac
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@~5.1.3#~builtin<compat/typescript>":
+  version: 5.1.6
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: f53bfe97f7c8b2b6d23cf572750d4e7d1e0c5fff1c36d859d0ec84556a827b8785077bc27676bf7e71fae538e517c3ecc0f37e7f593be913d884805d931bc8be
   languageName: node
   linkType: hard
 
