@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/prefer-ts-expect-error */
+/* eslint-disable deprecation/deprecation */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // There's lots of funny stuff due to the typing of ts.Node
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access */
 import * as ts from 'typescript';
@@ -1123,7 +1126,7 @@ export class Converter {
       }
 
       case SyntaxKind.PropertyAssignment: {
-        // eslint-disable-next-line deprecation/deprecation
+        // @ts-ignore
         const { questionToken, exclamationToken } = node;
 
         if (questionToken) {
@@ -1153,7 +1156,7 @@ export class Converter {
       }
 
       case SyntaxKind.ShorthandPropertyAssignment: {
-        // eslint-disable-next-line deprecation/deprecation
+        // @ts-ignore
         const { modifiers, questionToken, exclamationToken } = node;
 
         if (modifiers) {
@@ -1875,7 +1878,8 @@ export class Converter {
               specifiers: [],
               importKind: 'value',
               attributes: this.convertImportAttributes(
-                // eslint-disable-next-line deprecation/deprecation -- TS <5.3
+                // eslint-disable-next-line deprecation/deprecation
+                // @ts-ignore -- TS <5.3
                 node.attributes ?? node.assertClause,
               ),
             },
@@ -1956,7 +1960,8 @@ export class Converter {
                 exportKind: node.isTypeOnly ? 'type' : 'value',
                 declaration: null,
                 attributes: this.convertImportAttributes(
-                  // eslint-disable-next-line deprecation/deprecation -- TS <5.3
+                  // eslint-disable-next-line deprecation/deprecation
+                  // @ts-ignore -- TS <5.3
                   node.attributes ?? node.assertClause,
                 ),
               },
@@ -1979,7 +1984,8 @@ export class Converter {
                   ? this.convertChild(node.exportClause.name)
                   : null,
               attributes: this.convertImportAttributes(
-                // eslint-disable-next-line deprecation/deprecation -- TS <5.3
+                // eslint-disable-next-line deprecation/deprecation
+                // @ts-ignore -- TS <5.3
                 node.attributes ?? node.assertClause,
               ),
             },
@@ -2659,7 +2665,7 @@ export class Converter {
       }
 
       case SyntaxKind.PropertySignature: {
-        // eslint-disable-next-line deprecation/deprecation
+        // @ts-ignore
         const { initializer } = node;
         if (initializer) {
           this.#throwError(
@@ -2708,7 +2714,7 @@ export class Converter {
       }
 
       case SyntaxKind.FunctionType: {
-        // eslint-disable-next-line deprecation/deprecation
+        // @ts-ignore
         const { modifiers } = node;
         if (modifiers) {
           this.#throwError(
