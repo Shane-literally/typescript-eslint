@@ -13,7 +13,7 @@ This rule reports when a `switch` statement over a value typed as a union of lit
 
 ## Options
 
-### `"allowDefaultCaseForExhaustiveSwitch"`
+### `allowDefaultCaseForExhaustiveSwitch`
 
 Defaults to true. If set to false, this rule will also report when a `switch` statement has a case for everything in a union and _also_ contains a `default` case. Thus, by setting this option to false, the rule becomes stricter.
 
